@@ -1,0 +1,57 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: 'Syne Mono', monospace;
+    font-size: 1.5rem;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
+
+#gamespace1 {
+    justify-items: center;
+    text-align: center;
+    width: 50vw;
+    padding: 32px;
+}
+
+#selection {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 32px 16px;
+
+}
+
+.playerChoice {
+    width: 20%;
+    border-radius: 50%;
+    transition: transform .2s;
+}
+
+.playerChoice:hover {
+    transform: scale(1.2);
+    border-color: #c3bfae;
+    box-shadow: 0 0 1rem #c3bfae;
+}
+
+#footer {
+    text-align: center;
+}
+
+#gameResult {
+    opacity: 0;
+}
