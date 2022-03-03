@@ -7,93 +7,42 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');</style>
 </head>
 <body>
 
+    <div id="container">
+
+        <div id="header">
+            <h1 style="margin-bottom: 0;">Rock Paper Scissors</h1>
+            <h3>A game of (mostly) chance!</h3>
+        </div>
+
+        <div id="gamespace1">
+            <p style="margin-bottom: 0;">Choose your weapon</p>
+            <div id="selection">
+                <input type="image" src="./img/player-rock.png" id="rock" class="playerChoice zoom"/>
+                <input type="image" src="./img/player-paper.png" id="paper" class="playerChoice zoom"/>
+                <input type="image" src="./img/player-scissors.png" id="scissors" class="playerChoice zoom"/>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="results">
+                <p id="roundResult">First to 5 wins!</p>
+            </div>
+            <div class="results">
+                <p id="gameResult">placeholdertext</p>
+            </div>
+        </div>
+
+    </div>
+    
+    
+    
     
     <script>
 
-        let computerWins = 0;
-        let playerWins = 0; 
-        let i = 0;
-
-        function computerPlay() {
-
-            let rng = Math.floor(Math.random()*3) + 1;
-            let choice;
-            rng == 1 ? choice = 'rock' :
-            rng == 2 ? choice = 'paper':
-            choice = 'scissors';
-            return choice;
-        
-        }
-
-        function playerPlay() {
-
-            let input = prompt('Please enter a play','');
-            let choice = input.toLowerCase();
-            if (input === '' || input === null) {
-                alert('Please enter a valid play');
-                return playerPlay();
-            } 
-            else 
-            if (choice == 'rock' || choice == 'paper' || choice == 'scissors') {            
-                return choice;
-            } 
-            else {
-                alert('Please enter a valid play');
-                return playerPlay();
-            }
-
-        }
-
-        function game() {
-            
-            function playRound() {
-
-                const computerHand = computerPlay();
-                const playerHand = playerPlay();
-                let result;
-
-                if (computerHand == playerHand) {
-                    result = console.log(`Tie! You both selected ${computerHand}.`);
-                    i--;
-                }
-                else if ( (computerHand == 'rock' && playerHand == 'scissors') || (computerHand == 'scissors' && playerHand == 'paper') || (computerHand == 'paper' && playerHand == 'rock') ) {
-                    result = console.log(`${computerHand.charAt(0).toUpperCase() + computerHand.slice(1)} beats ${playerHand}; computer wins!`);
-                    computerWins++;
-                }
-                else {
-                    result = console.log(`${playerHand.charAt(0).toUpperCase() + playerHand.slice(1)} beats ${computerHand}; player wins!`);
-                    playerWins++;
-                }
-                return result;
-
-            }
-
-            function winner() {
-                
-                if (computerWins > playerWins) {
-                    return console.log(`Computer wins the game with ${computerWins} points to ${playerWins}.`);
-                }
-                else {
-                    return console.log(`Player wins the game with ${playerWins} points to ${computerWins}.`);
-                }
-    
-            }
-
-            for (; i < 5; i++) {
-                
-                playRound();
-
-            }
-
-            return winner();
-
-        }
-
-
-    </script>
-    
+    </script>    
 </body>
 </html>
