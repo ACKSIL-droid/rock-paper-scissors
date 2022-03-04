@@ -9,7 +9,7 @@ const gameSpace = document.getElementById('gamespace');
     const announcer = document.getElementById('announcer');
     const buttons = document.querySelectorAll('.playerchoice');
     let disappear = document.querySelectorAll('.disappear');
-    let versus = document.getElementById('versus');
+    const versus = document.getElementById('versus');
     let computer = document.getElementById('computer');
 
 const resultSpace = document.getElementById('resultspace');
@@ -83,7 +83,7 @@ function playRound() {
         playerWins++;
     }
     scorer.style.opacity = 1;
-    scorer.textContent = `Computer: ${computerWins}\xa0\xa0\xa0Player: ${playerWins}`;
+    scorer.textContent = `Player: ${playerWins}\xa0\xa0\xa0Computer: ${computerWins}`;
 }
 
 function animateRound() {
@@ -92,7 +92,6 @@ function animateRound() {
         if (!button.classList.contains('visible')) {
             button.classList.add('invisible');
         }
-        //if (button.classList.contains('winner)) {change style, border, zoom}
     });
     versus.style.display = 'block';
     computer.style.display = 'block';
@@ -131,6 +130,9 @@ function roundReset () {
         button.classList.remove('visible');
         button.classList.remove('invisible');
     }
+    if (!button.classList.contains('zoom')) {
+        button.classList.add('zoom');
+    }
     if (button.disabled = true) {
         button.disabled = false;
     }
@@ -140,4 +142,3 @@ function roundReset () {
     nextRound.style.opacity = 0;
     nextRound.disabled = true;
 }
-
