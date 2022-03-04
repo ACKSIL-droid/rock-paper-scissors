@@ -22,7 +22,7 @@ html {
     padding: 8px;
 }
 
-#gamespace1 {
+#gamespace {
     justify-items: center;
     text-align: center;
     width: 50vw;
@@ -36,22 +36,78 @@ html {
 
 }
 
-.playerChoice {
+.playerchoice {
     width: 20%;
     border-radius: 50%;
     transition: transform .2s;
 }
 
-.playerChoice:hover {
+.zoom:hover {
     transform: scale(1.2);
     border-color: #c3bfae;
     box-shadow: 0 0 1rem #c3bfae;
 }
 
-#footer {
-    text-align: center;
+.visible {
+    display: block;
 }
 
-#gameResult {
+#versus, #computer, .invisible {
+    display: none;
+}
+
+#computer {
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 0;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#scorer {
     opacity: 0;
+}
+
+#playagain {
+    font-family: inherit;
+    color:  white;
+    background-color: black;
+    border: 4px solid white;
+    font-size: 0.8em;
+    border-radius: 24px;
+    padding: 8px 16px;
+    margin-top: 16px;
+    max-width: 100px;
+    transition: transform .2s;
+}
+
+#playagain:hover {
+    transform: scale(1.1);
+    border-color: #c3bfae;
+    box-shadow: 0 0 1rem #c3bfae;
+}
+
+#nextround {
+    opacity: 0;
+    font-family: inherit;
+    color:  white;
+    background-color: black;
+    border: 4px solid white;
+    font-size: 0.8em;
+    border-radius: 24px;
+    padding: 8px 16px;
+    margin-top: 16px;
+    max-width: 100px;
+    transition: transform .2s;
+}
+
+#nextround:hover {
+    transform: scale(1.1);
+    border-color: #c3bfae;
+    box-shadow: 0 0 1rem #c3bfae;
 }
