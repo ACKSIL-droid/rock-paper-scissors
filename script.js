@@ -141,4 +141,5 @@ function roundReset () {
     computer.style.display = 'none';
     nextRound.style.opacity = 0;
     nextRound.disabled = true;
+    announcer.textContent = 'Choose your weapon';
 }
