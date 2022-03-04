@@ -13,7 +13,9 @@ const gameSpace = document.getElementById('gamespace');
     let computer = document.getElementById('computer');
 
 const resultSpace = document.getElementById('resultspace');
-resultSpace.style.display = "none";
+    resultSpace.style.display = "none";
+    const finalResult = document.getElementById('finalresult');
+    const playAgain = document.getElementById('playagain');
 
 const footer = document.getElementById('footer');
     const roundResult = document.getElementById('roundresult');
@@ -40,6 +42,14 @@ buttons.forEach((button) => {
         }
     }
 )});
+
+nextRound.addEventListener('click', () => {
+    roundReset();
+});
+
+playAgain.addEventListener('click', () => {
+    document.location.reload(true);
+});
 
 
 function computerPlay() {
@@ -105,12 +115,29 @@ function animateRound() {
 function winner() { 
     gameSpace.style.display = 'none';
     footer.style.display = 'none';
-    resultSpace.style.display = 'flex-column';
+    resultSpace.style.display = 'block';
 
     if (computerWins > playerWins) {
-        gameResult.textContent = `Computer wins the game with ${computerWins} points to ${playerWins}.`;
+        finalResult.textContent = `Computer wins the game with ${computerWins} points to ${playerWins}.`;
     }
     else {
-        gameResult.textContent = `Player wins the game with ${playerWins} points to ${computerWins}.`;
+        finalResult.textContent = `Player wins the game with ${playerWins} points to ${computerWins}.`;
     }  
 }
+
+function roundReset () {
+    buttons.forEach((button) => {
+    if (button.classList.contains('visible') || button.classList.contains('invisible')) {
+        button.classList.remove('visible');
+        button.classList.remove('invisible');
+    }
+    if (button.disabled = true) {
+        button.disabled = false;
+    }
+    });
+    versus.style.display = 'none';
+    computer.style.display = 'none';
+    nextRound.style.opacity = 0;
+    nextRound.disabled = true;
+}
+
