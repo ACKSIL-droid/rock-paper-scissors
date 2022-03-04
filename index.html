@@ -18,22 +18,30 @@
             <h3>A game of (mostly) chance!</h3>
         </div>
 
-        <div id="gamespace1">
-            <p style="margin-bottom: 0;">Choose your weapon</p>
+        <div id="gamespace">
+            <p style="margin-bottom: 0;" id="announcer">Choose your weapon</p>
             <div id="selection">
-                <input type="image" src="./img/player-rock.png" id="rock" class="playerChoice zoom"/>
-                <input type="image" src="./img/player-paper.png" id="paper" class="playerChoice zoom"/>
-                <input type="image" src="./img/player-scissors.png" id="scissors" class="playerChoice zoom"/>
+                <input type="image" src="./img/player-rock.png" id="rock" class="playerchoice zoom"/>
+                <input type="image" src="./img/player-paper.png" id="paper" class="playerchoice zoom"/>
+                <input type="image" src="./img/player-scissors.png" id="scissors" class="playerchoice zoom"/>
+                <h2 id="versus">VS</h2>
+                <img id="computer"/>
             </div>
+        </div>
+
+        <div id="resultspace">
+            <h1 id="finalresult"></h1>
+            <button type="submit" id="playagain">Play again</button>
         </div>
 
         <div id="footer">
             <div class="results">
-                <p id="roundResult">First to 5 wins!</p>
+                <p id="roundresult">First to 5 wins!</p>
             </div>
             <div class="results">
-                <p id="gameResult">placeholdertext</p>
+                <p id="scorer">placeholdertext no-movement</p>
             </div>
+            <button type="submit" id="nextround">Next round</button>
         </div>
 
     </div>
