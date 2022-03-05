@@ -8,7 +8,6 @@ let playerHand;
 const gameSpace = document.getElementById('gamespace');
     const announcer = document.getElementById('announcer');
     const buttons = document.querySelectorAll('.playerchoice');
-    let disappear = document.querySelectorAll('.disappear');
     const versus = document.getElementById('versus');
     let computer = document.getElementById('computer');
 
@@ -141,5 +140,5 @@ function roundReset () {
     computer.style.display = 'none';
     nextRound.style.opacity = 0;
     nextRound.disabled = true;
-    announcer.textContent = 'Choose your weapon';
+    announcer.textContent = 'Make your play';
 }
