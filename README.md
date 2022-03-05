@@ -1,8 +1,8 @@
 # Rock Paper Scissors
 ### A syllabus project for The Odin Project fullstack web-dev course
 
-A simple implimentation of the Rock Paper Scissors assignment from [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors), and my first *JS* project.  This is a first stage prototype, console-only with some error handling but no array functionality. Updates to come.
+A simple implimentation of the Rock Paper Scissors assignment from [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors), and my first *JS* project. Now updated with simple animations and gameplay loop.
 
-### Best of five!
+### First to five!
 
-Play five rounds against the computer (ties don't count!), and the highest score at the end wins.
+Play this classic game, first-to-five against the computer.
