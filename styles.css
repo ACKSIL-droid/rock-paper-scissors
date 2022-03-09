@@ -11,7 +11,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 97vh;
     
 }
 
@@ -124,4 +124,18 @@ html {
     transform: scale(1.1);
     border-color: #c3bfae;
     box-shadow: 0 0 1rem #c3bfae;
+}
+
+#bottombar {
+    text-align: center;
+    font-size: medium;
+}
+
+#gitLink {
+    text-decoration: none;
+    color: #c3bfae;
+}
+
+#gitLink:hover {
+    text-decoration: underline;
 }
